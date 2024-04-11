@@ -36,6 +36,7 @@ function LongJump(score,callbackFnc) {
         console.log("Previous score: ",score);
 
         let color = ['red', 'yellow', 'green', 'blue'][Math.floor(Math.random() * 4)];
+        console.log('color:', color)
         score[color] += 150;
 
         console.log("Updated Score: ", score);
@@ -63,6 +64,7 @@ function HighJump(score,callbackFnc) {
 
 function AwardCeremony(score) {
     console.log("Award Ceremony started");
+    console.log('Final score:', score)
     let sortedScores = Object.entries(score).sort((a, b) => b[1] - a[1]);
     console.log(`${sortedScores[0][0]} came first with ${sortedScores[0][1]} points.`);
     console.log(`${sortedScores[1][0]} came second with ${sortedScores[1][1]} points.`);
